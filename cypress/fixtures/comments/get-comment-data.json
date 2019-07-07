@@ -1,0 +1,7 @@
+{
+  "postId": 1,
+  "id": 1,
+  "name": "lore-ipsum",
+  "email": "nishant@cypress-hello.com",
+  "body": "Comment comes from fixture from file path"
+}

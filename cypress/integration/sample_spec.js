@@ -1,4 +1,4 @@
-describe('MyFirst test', () => {
+describe('Selectors and assertions', () => {
   beforeEach(() => {
     cy.visit('http://blazedemo.com/');
   });
@@ -15,9 +15,5 @@ describe('MyFirst test', () => {
     cy.get('td').contains('Lufthansa').parent().find('input[type="submit"]').as("bookThisFlight");
     cy.get("@bookThisFlight").invoke('attr', 'value').should('include', 'Choose This Flight');
     cy.get("@bookThisFlight").click();
-  });
-
-  it.only('should intercept and modify api data', () => {
-
   });
 });
