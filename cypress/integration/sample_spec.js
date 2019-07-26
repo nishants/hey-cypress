@@ -37,8 +37,8 @@ describe('Selectors and assertions', () => {
 
     const rowsToText = (...all) => all.map(a => a.innerText || a.textContent);
     const flightNames = ["Virgin America", "United Airlines", "Aer Lingus", "Virgin America", "Lufthansa"];
-    let flightNameSelector = "tbody > tr > :nth-child(4)";
-    let nodesToText = (...all) => all.map(a => a.innerText);
+    const flightNameSelector = "tbody > tr > :nth-child(4)";
+    const nodesToText = (...all) => all.map(a => a.innerText);
     cy.get(flightNameSelector).spread(nodesToText).should('deep.equal', flightNames)
   });
 });
