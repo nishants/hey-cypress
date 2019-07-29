@@ -18,7 +18,7 @@
 | -------------- | -------------------------- | ------------------------------------------------------------ |
 | contains text  | .should('include', 'text') | ```cy.url().should( 'include', 'vacation.html')```           |
 | element exists | should('exist')            | ```cy.contains('Destination of the week: Hawaii !').should('exist')``` |
-| element contains text |  `invoke('text').should('include', `Travel`)`                          |   `cy.get('.brand').first().invoke('text').should('include', `Travel`); `                                                          |
+| element contains text |  `invoke('text').should('include', 'Travel')`                     |`cy.get('.brand').first().invoke('text').should('include', 'Travel'); `|
 
 **Recipe**
 
