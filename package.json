@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cypress": "cypress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cucumber=true node cypress.js",
+    "test:js": "node cypress.js",
+    "test:ci": "ci=true node cypress.js"
   },
   "repository": {
     "type": "git",
