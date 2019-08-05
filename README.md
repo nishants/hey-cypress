@@ -10,7 +10,12 @@
 | type and enter                         | type('todo A{enter}')                   | `cy.get('.new-todo').type('todo A{enter}')`                  |
 | Click button that might not be visible | cy.get('button').click({ force: true }) |                                                              |
 
-
+Trim and compare text : 
+```
+.should(($div) => {
+    expect($div.text().trim()).equal('Skywalker,Anakin');
+  })
+```
 
 **Assertions**
 
