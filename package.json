@@ -7,7 +7,11 @@
     "cypress": "cypress",
     "test": "cucumber=true node cypress.js",
     "test:js": "node cypress.js",
-    "test:ci": "ci=true node cypress.js"
+    "test:ci": "ci=true node cypress.js",
+    "prettier:write": "prettier --write '{**/*,*}.{js,json}'",
+    "prettier": "prettier --check '{**/*,*}.{js,json}'",
+    "lint": "node node_modules/eslint/bin/eslint.js  .",
+    "precommit": "npm run prettier && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -21,9 +25,16 @@
   "homepage": "https://github.com/nishants/hey-cypress#readme",
   "dependencies": {
     "cypress": "^3.3.2",
-    "cypress-cucumber-preprocessor": "^1.13.0"
+    "cypress-cucumber-preprocessor": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "husky": "^3.0.2"
   }
 }

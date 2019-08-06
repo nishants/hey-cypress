@@ -5,12 +5,13 @@ const staticConfig = () => ({
 });
 
 const runtimeConfig = () => ({
-  ignoreTestFiles: Boolean(process.env.cucumber) ? "*.js" : "none",
+  ignoreTestFiles: process.env.cucumber ? '*.js' : 'none'
 });
 
-const headed = !Boolean(process.env.ci) && !Boolean(process.env.headless);
+const headed = !process.env.ci && !process.env.headless;
 
-const runTests = (config) => headed ? cypress.open(config) : cypress.run(config);
+const runTests = config =>
+  headed ? cypress.open(config) : cypress.run(config);
 
 runTests({
   config: {
@@ -18,6 +19,6 @@ runTests({
     ...runtimeConfig(),
     // baseUrl: 'http://localhost:8080',
     chromeWebSecurity: false,
-    video: false,
+    video: false
   }
 });
