@@ -17,7 +17,6 @@ runTests({
   config: {
     ...staticConfig(),
     ...runtimeConfig(),
-    // baseUrl: 'http://localhost:8080',
     chromeWebSecurity: false,
     video: false
   }
