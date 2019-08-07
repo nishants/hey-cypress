@@ -1,6 +1,7 @@
 const cypress = require('cypress');
 
 const staticConfig = () => ({
+  watchForFileChanges: false,
   integrationFolder: './features'
 });
 

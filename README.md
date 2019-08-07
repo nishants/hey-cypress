@@ -1,3 +1,22 @@
+** TODO 
+- sanity test for demo user
+- tests for mobile pages 
+- extract users.json
+- datafile.json
+- look_like matchers
+
+
+~~~sh
+```
+# Run Tests in cypress open mode
+npm run test
+
+# Prettier
+npm run prettier:write
+npm run prettier
+```
+~~~
+ 
 **Selectors**
 
 |                             | API                            | Example                                                      |

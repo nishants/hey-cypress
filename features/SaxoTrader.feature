@@ -1,8 +1,7 @@
-Feature: The Facebook
-
-  I want to open a social network page
+Feature: Demo acount
+  As a user, I should be able to login using demo account and explore supported app features.
 
   @focus
-  Scenario: Opening a social network page
-    Given I open Google page
-    Then I see "SaxoTraderGO" in the title
+  Scenario: User logs in on desktop
+    Given I login as a demo user
+    Then I can see trading workspace
