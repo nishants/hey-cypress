@@ -17,11 +17,16 @@ Trim and compare text :
   })
 ```
 
+Asset on text
+```
+
+```
 **Assertions**
 
 |                | API                        | Example                                                      |
 | -------------- | -------------------------- | ------------------------------------------------------------ |
 | contains text  | .should('include', 'text') | ```cy.url().should( 'include', 'vacation.html')```           |
+| has text  | .should('have.text', '<value>') | ```cy.get("#name").should( 'have.text', 'vacation.html')```           |
 | element exists | should('exist')            | ```cy.contains('Destination of the week: Hawaii !').should('exist')``` |
 | element contains text |  `invoke('text').should('include', 'Travel')`                     |`cy.get('.brand').first().invoke('text').should('include', 'Travel'); `|
 
